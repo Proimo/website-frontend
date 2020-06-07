@@ -37,4 +37,10 @@ jobs:
       run: npm run build
 
     - name: Build docker image
-      run: docker build --pull -t "$GITHUB_REPOSITORY:$GITHUB_SHA" -t "$GITHUB_REPOSITORY:latest" .
+      run: docker build --pull -t docker.pkg.github.com/$GITHUB_REPOSITORY:$GITHUB_SHA -t docker.pkg.github.com/$GITHUB_REPOSITORY:latest .
+
+    - name: Authenticate with token
+      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login https://docker.pkg.github.com -u danpercic --password-stdin
+
+    - name: Push image to registry
+      run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY:$GITHUB_SHA docker push docker.pkg.github.com/$GITHUB_REPOSITORY:latest
