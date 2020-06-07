@@ -1,7 +1,9 @@
 version: '3'
 services:
-    proimo-frontend:
-        container_name: proimo-frontend-container
-        restart: always
-        ports:
-        - "5000:80"
+  proimo-frontend:
+    build:
+      context: .
+    container_name: proimo-frontend-container
+    restart: always
+    ports:
+      - "5000:80"
