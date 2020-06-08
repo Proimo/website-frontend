@@ -8,8 +8,9 @@
         "lint": "ng lint",
         "test": "ng test",
         "e2e": "ng e2e",
+        "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
         "karma-ci": "ng test --watch=false --browsers=ChromeHeadless",
-        "test-ci": "npm run karma-ci && npm run e2e",
+        "test-ci": "npm run karma-ci && npm run e2e-ci",
         "postinstall": "ngcc"
     },
     "private": true,
