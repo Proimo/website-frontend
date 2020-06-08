@@ -34,16 +34,7 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Push SHA tagged image to GitHub Packages
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-        registry: docker.pkg.github.com
-        repository: proimo/website-frontend/image
-        tag_with_sha: true
-
-    - name: Push 'latest' tagged image to GitHub Packages
+    - name: Push to GitHub Packages
       uses: docker/build-push-action@v1
       with:
         username: ${{ github.actor }}
@@ -51,6 +42,7 @@ jobs:
         registry: docker.pkg.github.com
         repository: proimo/website-frontend/image
         tags: latest
+        tag_with_sha: true
 
     - name: Pull & run image on server
       uses: appleboy/ssh-action@master
