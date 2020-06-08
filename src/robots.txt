@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proimo.percic.live/sitemap.xml
