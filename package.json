@@ -9,7 +9,7 @@
         "test": "ng test",
         "e2e": "ng e2e",
         "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
-        "karma-ci": "ng test --watch=false --browsers=ChromeHeadless",
+        "karma-ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
         "test-ci": "npm run karma-ci && npm run e2e-ci",
         "postinstall": "ngcc"
     },
