@@ -1,8 +1,7 @@
 #FROM node:12-alpine as builder
-#
-#
-#COPY /dist /app/dist
 
+#COPY /dist /app/dist
+#
 #COPY package.json package-lock.json /app/
 #RUN npm ci
 #
@@ -18,6 +17,6 @@ RUN apk add --no-cache nodejs
 
 COPY /dist /app/dist
 #COPY --from=builder /app/dist /app/dist
-#COPY /nginx/app /etc/nginx/sites-enabled
+COPY /nginx/app /etc/nginx/sites-enabled
 
 CMD node /app/dist/server/main.js
