@@ -34,6 +34,9 @@ jobs:
     - name: Build
       run: npm run build
 
+    - name: Run tests
+      run: npm run test-ci
+
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v1
       with:
