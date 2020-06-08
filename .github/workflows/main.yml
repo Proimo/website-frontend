@@ -31,11 +31,11 @@ jobs:
     - name: Lint
       run: npm run lint
 
-    - name: Build
-      run: npm run build
-
     - name: Run tests
       run: npm run test-ci
+
+    - name: Build
+      run: npm run build:ssr
 
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v1
