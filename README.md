@@ -1,3 +1,5 @@
+![Proimo Website](https://github.com/proimo/website-frontend/workflows/Proimo%20Website/badge.svg?branch=master)
+
 # WebsiteFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
