@@ -45,7 +45,7 @@
                             ],
                             "optimization": true,
                             "outputHashing": "all",
-                            "sourceMap": true,
+                            "sourceMap": false,
                             "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
@@ -160,19 +160,6 @@
                             "browserTarget": "website-frontend:build:production",
                             "serverTarget": "website-frontend:server:production"
                         }
-                    }
-                },
-                "prerender": {
-                    "builder": "@nguniversal/builders:prerender",
-                    "options": {
-                        "browserTarget": "website-frontend:build:production",
-                        "serverTarget": "website-frontend:server:production",
-                        "routes": [
-                            "/"
-                        ]
-                    },
-                    "configurations": {
-                        "production": {}
                     }
                 }
             }

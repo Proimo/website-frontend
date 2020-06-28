@@ -3,7 +3,7 @@ services:
   proimo-frontend:
     build:
       context: .
-    container_name: proimo-frontend-container
+    container_name: ProimoFrontend
     restart: always
     ports:
       - "5000:4000"

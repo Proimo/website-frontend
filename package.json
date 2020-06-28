@@ -8,7 +8,6 @@
     "dev:ssr": "ng run website-frontend:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run website-frontend:server:production",
-    "prerender": "ng run website-frontend:prerender",
     "postinstall": "ngcc",
     "lint": "ng lint",
     "test": "ng test",

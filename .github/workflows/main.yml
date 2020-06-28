@@ -35,7 +35,7 @@ jobs:
       run: npm run test-ci
 
     - name: Build
-      run: npm run build:ssr
+      run: npm run build:ssr --unsafe-perm
 
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v1
