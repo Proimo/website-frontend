@@ -1,0 +1,14 @@
+{
+    "/api/*": {
+        "target": "https://proimo.percic.live",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/content/*": {
+        "target": "https://proimo.percic.live",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
