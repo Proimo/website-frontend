@@ -1,10 +1,9 @@
-FROM nginx:1.17.1-alpine
+FROM nginx:alpine
 
 WORKDIR /app
 
-RUN apk add --no-cache nodejs
+RUN apk add --no-cache nodejs supervisor
 
-COPY /dist /app/dist
-COPY /nginx/app /etc/nginx/sites-enabled
-
-CMD node /app/dist/server/main.js
+COPY dist /app/dist
+COPY etc /etc
+COPY node-entrypoint.sh /docker-entrypoint.d/
