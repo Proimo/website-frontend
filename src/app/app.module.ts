@@ -3,10 +3,9 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import { MenuComponent } from './components/menu/menu.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -17,7 +16,7 @@ import { MenuComponent } from './components/menu/menu.component';
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
         AppRoutingModule,
-        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
