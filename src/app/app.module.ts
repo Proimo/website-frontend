@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {HomePageComponent} from './pages/home-page/home-page.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
         BrowserModule.withServerTransition({appId: 'serverApp'}),
         AppRoutingModule,
         HttpClientModule,
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]

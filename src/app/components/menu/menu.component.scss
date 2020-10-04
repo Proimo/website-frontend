@@ -1,0 +1,46 @@
+img {
+    width: 65px;
+    height: auto;
+}
+
+.btn {
+    background: #EB5757;
+    border-radius: 10px;
+    width: 190px;
+    height: 42px;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #FFB2B2;
+}
+
+.navbar-toggler-icon {
+    background-image: url("/assets/icons/hamburger.png");
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.mobile-font-size {
+    @media screen and (max-width: 990px) {
+        font-size: 14px;
+    }
+}
+
+.collapse {
+    @media screen and (min-width: 990px) {
+        width: 70%;
+    }
+}
+
+.collapse > ul {
+    width: 100%;
+}
+
+.nav-link {
+    @media screen and (max-width: 990px) {
+        display: flex;
+    }
+}
