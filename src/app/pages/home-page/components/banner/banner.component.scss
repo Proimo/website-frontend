@@ -1,0 +1,38 @@
+// https://startbootstrap.com/snippets/full-image-header/
+.bg {
+    background-image: url("/assets/images/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.58);
+
+    position: absolute;
+    height: 55vh;
+}
+
+// https://css-tricks.com/full-width-containers-limited-width-parents/
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.whitespace {
+    margin-top: -40px;
+    background: white;
+    transform: matrix(1, -0.05, -0.05, -1, 0, 0);
+    height: 122px;
+}
+
+.small-text {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.title {
+    font-size: 64px;
+    line-height: 75px;
+}
