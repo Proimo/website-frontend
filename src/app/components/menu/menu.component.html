@@ -1,93 +1,116 @@
-<nav class="navbar navbar-expand-lg fixed-top container d-flex justify-content-between">
-    <button
-        class="navbar-toggler shadow-none col-3 col-lg-auto d-flex d-lg-none justify-content-start order-0"
-        data-toggle="collapse"
-        data-target="#content"
-        aria-controls="content"
-        aria-expanded="false"
-        aria-label="Toggle menu items"
-    >
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="fixed-top" [ngClass]="isExpanded?'bg-white':''">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between container">
+        <!-- Hamburger Button -->
+        <button
+            class="navbar-toggler shadow-none col-3 col-lg-auto d-flex d-lg-none justify-content-start order-0"
+            data-toggle="collapse"
+            data-target="#content"
+            aria-controls="content"
+            aria-expanded="false"
+            aria-label="Open menu items"
+            (click)="isExpanded = !isExpanded"
+            [ngStyle]="isExpanded?{'visibility': 'hidden'}:null"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <a class="navbar-brand mr-0 col-3 col-lg-auto mr-lg-0 d-flex justify-content-center order-1 order-lg-0"
-       href="#">
-        <img src="assets/icons/proimo-logo.png" alt="Proimo Group Brand Logo">
-    </a>
+        <!-- Brand Logo -->
+        <a class="navbar-brand mr-0 col-3 col-lg-auto mr-lg-0 d-flex justify-content-center order-1 order-lg-0"
+           href="/">
+            <img src="assets/icons/proimo-logo.png" alt="Proimo Group Brand Logo">
+        </a>
 
-    <div class="navbar-collapse collapse order-3 order-lg-1" id="content">
-        <ul class="navbar-nav mb-2 mb-lg-0 d-lg-flex justify-content-around">
-            <li *ngFor="let item of menuItems"
-                class="nav-item d-flex justify-content-center"
-                [ngClass]="item.children?'dropdown':''"
-            >
-                <a *ngIf="item.type === 'ExternalLink' && !item.children"
-                   class="nav-link text-white"
-                   href="{{item.link}}"
+        <div id="content" class="navbar-collapse collapse order-3 order-lg-1">
+            <ul class="navbar-nav mb-2 mb-lg-0 d-lg-flex justify-content-around">
+                <li *ngFor="let item of menuItems"
+                    class="nav-item d-flex justify-content-center"
+                    [ngClass]="item.children?'dropdown':''"
                 >
-                    {{item.title}}
-                </a>
-
-                <a
-                    *ngIf="item.type === 'InternalLink' && !item.children"
-                    class="nav-link text-white text-center"
-                    [routerLink]=item.link
-                    [routerLinkActive]="['active']"
-                >
-                    {{item.title}}
-                </a>
-
-                <div *ngIf="item.children" class="dropdown">
-                    <a
-                        class="nav-link text-white dropdown-toggle"
-                        id="toggler"
-                        data-toggle="dropdown"
-                        role="button"
+                    <a *ngIf="item.type === 'ExternalLink' && !item.children"
+                       class="nav-link text-white"
+                       href="{{item.link}}"
                     >
                         {{item.title}}
-                        <span class="caret"></span>
                     </a>
 
-                    <ul
-                        class="dropdown-menu"
-                        aria-labelledby="toggler"
-                        role="menu"
+                    <a
+                        *ngIf="item.type === 'InternalLink' && !item.children"
+                        class="nav-link text-white text-center"
+                        [routerLink]=item.link
+                        [routerLinkActive]="['active']"
                     >
-                        <li
-                            *ngFor="let child of item.children"
-                            role="menuitem"
+                        {{item.title}}
+                    </a>
+
+                    <div *ngIf="item.children" class="dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            id="toggler"
+                            data-toggle="dropdown"
+                            role="button"
                         >
-                            <a
-                                *ngIf="child.type === 'ExternalLink'"
-                                class="dropdown-item"
-                                href="{{child.link}}"
-                            >
-                                {{child.title}}
-                            </a>
+                            {{item.title}}
+                            <span class="caret"></span>
+                        </a>
 
-                            <a
-                                *ngIf="child.type === 'InternalLink'"
-                                class="dropdown-item"
-                                [routerLink]="child.link"
-                                [routerLinkActive]="['active']"
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="toggler"
+                            role="menu"
+                        >
+                            <li
+                                *ngFor="let child of item.children"
+                                role="menuitem"
                             >
-                                {{child.title}}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
+                                <a
+                                    *ngIf="child.type === 'ExternalLink'"
+                                    class="dropdown-item"
+                                    href="{{child.link}}"
+                                >
+                                    {{child.title}}
+                                </a>
 
-    <div class="col-3 col-lg-auto d-flex justify-content-end order-2 order-lg-3">
-        <button
-            *ngIf="buttonItem"
-            class="btn text-white shadow-none py-0 mobile-font-size"
-            [routerLink]=buttonItem.link
-            [routerLinkActive]="['active']"
-        >
-            {{buttonItem.title}}
-        </button>
-    </div>
-</nav>
+                                <a
+                                    *ngIf="child.type === 'InternalLink'"
+                                    class="dropdown-item"
+                                    [routerLink]="child.link"
+                                    [routerLinkActive]="['active']"
+                                >
+                                    {{child.title}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-3 col-lg-auto d-flex justify-content-end order-2 order-lg-3">
+            <!-- Vreau să vând Button -->
+            <button
+                *ngIf="buttonItem && !isExpanded"
+                class="btn text-white shadow-none py-0 mobile-font-size"
+                [routerLink]=buttonItem.link
+                [routerLinkActive]="['active']"
+            >
+                {{buttonItem.title}}
+            </button>
+
+            <!-- X Button -->
+            <div *ngIf="isExpanded"
+                 class="cursor-pointer navbar-toggler"
+                 data-toggle="collapse"
+                 data-target="#content"
+                 aria-controls="content"
+                 aria-expanded="true"
+                 aria-label="Close menu items"
+            >
+                <svg width="2.5em" height="2.5em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+</div>

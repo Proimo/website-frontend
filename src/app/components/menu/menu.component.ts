@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {MenuItem, MenuItemTypes} from '../../shared/models/menu-item';
 
 @Component({
@@ -6,7 +6,8 @@ import {MenuItem, MenuItemTypes} from '../../shared/models/menu-item';
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements AfterViewInit {
+    isExpanded = false;
     buttonItem: MenuItem;
     menuItems: MenuItem[] = [
         {
@@ -44,5 +45,13 @@ export class MenuComponent {
     constructor() {
         this.buttonItem = this.menuItems.find(item => item.type === MenuItemTypes.Button);
         this.menuItems = this.menuItems.filter(item => item.type !== MenuItemTypes.Button);
+    }
+
+    ngAfterViewInit() {
+        // Add event to cross icon click
+        const menuItems = document.getElementById('content');
+        menuItems.addEventListener('hidden.bs.collapse', () => {
+            this.isExpanded = !this.isExpanded;
+        });
     }
 }
