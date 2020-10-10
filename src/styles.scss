@@ -4,3 +4,30 @@
 html, body {
     font-family: 'Poppins', sans-serif;
 }
+
+.hide-on-mobile {
+    @media screen and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.hide-on-desktop {
+    @media screen and (min-width: 767px) {
+        display: none !important;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.mobile-text {
+    @media (max-width: 767px) {
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.hidden {
+    display: none;
+}

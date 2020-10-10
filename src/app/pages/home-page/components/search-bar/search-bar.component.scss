@@ -1,7 +1,3 @@
-.hidden {
-    display: none;
-}
-
 form {
     width: 975px;
 }
@@ -16,4 +12,44 @@ form {
 
 #submit {
     background-color: #0C9EFF;
+}
+
+#form {
+    @media screen and (max-width: 767px) {
+        background-color: transparent !important;
+    }
+}
+
+#offerType {
+    @media (max-width: 767px) {
+        background: #D3E8F5;
+    }
+}
+
+#submit,
+#buildingType,
+#location,
+#offerType {
+    border-radius: 20px;
+
+    @media (max-width: 767px) {
+        border-radius: 16px;
+        width: 100%;
+        height: 54px;
+    }
+}
+
+#rentLabel,
+#saleLabel {
+    @media (max-width: 767px) {
+        border-radius: 16px;
+        width: 100%;
+        height: 45px;
+    }
+}
+
+.form-group {
+    @media screen and (max-width: 767px) {
+        padding-bottom: 20px;
+    }
 }
