@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg d-flex justify-content-between container">
         <!-- Hamburger Button -->
         <button
-            class="navbar-toggler shadow-none col-3 col-lg-auto d-flex d-lg-none justify-content-start order-0"
+            class="navbar-toggler shadow-none col-4 col-sm-3 col-lg-auto d-flex d-lg-none justify-content-start order-0"
             data-toggle="collapse"
             data-target="#content"
             aria-controls="content"
@@ -15,7 +15,7 @@
         </button>
 
         <!-- Brand Logo -->
-        <a class="navbar-brand mr-0 col-3 col-lg-auto mr-lg-0 d-flex justify-content-center order-1 order-lg-0"
+        <a class="navbar-brand mr-0 col-4 col-sm3 col-lg-auto mr-lg-0 d-flex justify-content-center order-1 order-lg-0"
            href="/">
             <img src="assets/icons/proimo-logo.png" alt="Proimo Group Brand Logo">
         </a>
@@ -85,11 +85,11 @@
             </ul>
         </div>
 
-        <div class="col-3 col-lg-auto d-flex justify-content-end order-2 order-lg-3">
+        <div class="col-4 col-sm-3 col-lg-auto d-flex justify-content-end order-2 order-lg-3">
             <!-- Vreau să vând Button -->
             <button
                 *ngIf="buttonItem && !isExpanded"
-                class="btn text-white shadow-none py-0 mobile-font-size"
+                class="btn text-white shadow-none px-0 mobile-font-size font-weight-bold"
                 [routerLink]=buttonItem.link
                 [routerLinkActive]="['active']"
             >

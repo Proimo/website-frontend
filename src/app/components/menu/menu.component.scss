@@ -9,6 +9,10 @@ img {
     width: 190px;
     height: 42px;
     outline: none;
+
+    @media screen and (max-width: 767px) {
+        height: 35px;
+    }
 }
 
 .btn:hover {
@@ -24,8 +28,12 @@ img {
 }
 
 .mobile-font-size {
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 767px) {
         font-size: 14px;
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 12px;
     }
 }
 

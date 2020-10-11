@@ -4,10 +4,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.58);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.58);
 
     position: absolute;
     height: 55vh;
+
+    @media screen and (max-device-width: 320px) and (max-device-height: 570px) {
+        height: 75vh;
+    }
 }
 
 // https://css-tricks.com/full-width-containers-limited-width-parents/
