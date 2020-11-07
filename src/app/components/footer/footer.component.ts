@@ -20,6 +20,31 @@ export class FooterComponent {
             type: MenuItemTypes.ExternalLink,
         },
         {
+            title: 'Oferte',
+            link: '/oferte',
+            type: MenuItemTypes.InternalLink
+        },
+        {
+            title: 'Blog',
+            link: 'https://google.com',
+            type: MenuItemTypes.ExternalLink,
+        },
+        {
+            title: 'Oferte',
+            link: '/oferte',
+            type: MenuItemTypes.InternalLink
+        },
+        {
+            title: 'Blog',
+            link: 'https://google.com',
+            type: MenuItemTypes.ExternalLink,
+        },
+        {
+            title: 'Oferte',
+            link: '/oferte',
+            type: MenuItemTypes.InternalLink
+        },
+        {
             title: 'Servicii',
             children: [
                 {
@@ -43,6 +68,6 @@ export class FooterComponent {
 
     constructor() {
         this.buttonItem = this.menuItems.find(item => item.type === MenuItemTypes.Button);
-        this.menuItems = this.menuItems.filter(item => item.type !== MenuItemTypes.Button);
+        this.menuItems = this.menuItems.filter(item => item.type !== MenuItemTypes.Button && !item.children);
     }
 }

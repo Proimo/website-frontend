@@ -1,1 +1,52 @@
-<p>footer works!</p>
+<footer class="bg full-width">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 d-flex align-content-around flex-column">
+                <img class="logo pt-4" src="assets/icons/logo-black.png" alt="proimo logo black version">
+                <p class="text-white mt-auto">© 2020 Proimo Group</p>
+            </div>
+
+            <div class="col-6 d-flex flex-column height">
+                <div class="row justify-content-center pt-3 pb-2">
+                    <img class="icon px-0" src="assets/icons/whatsapp.png" alt="whatsapp-logo">
+                    <img class="icon px-0" src="assets/icons/messenger.png" alt="messenger-logo">
+                </div>
+
+                <div class="row d-flex align-content-around flex-wrap">
+                    <div class="col-3 text-center pt-4" *ngFor="let item of menuItems">
+                        <a *ngIf="item.type === 'ExternalLink'"
+                           class="text-white proimo-text"
+                           href="{{item.link}}"
+                        >
+                            {{item.title}}
+                        </a>
+
+                        <a
+                            *ngIf="item.type === 'InternalLink'"
+                            class="text-white text-center proimo-text"
+                            [routerLink]=item.link
+                            [routerLinkActive]="['active']"
+                        >
+                            {{item.title}}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center my-auto">
+                    <button
+                        *ngIf="buttonItem"
+                        class="btn text-white shadow-none px-0 mobile-font-size font-weight-bold"
+                        [routerLink]=buttonItem.link
+                        [routerLinkActive]="['active']"
+                    >
+                        {{buttonItem.title}}
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div>
+</footer>
