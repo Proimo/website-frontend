@@ -11,6 +11,8 @@ import { BannerComponent } from './pages/home-page/components/banner/banner.comp
 import { SearchBarComponent } from './pages/home-page/components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { OfferSectionComponent } from './pages/home-page/components/offer-section/offer-section.component';
+import { OfferComponent } from './pages/home-page/components/offer/offer.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './components/footer/footer.component';
         MenuComponent,
         BannerComponent,
         SearchBarComponent,
-        FooterComponent
+        FooterComponent,
+        OfferSectionComponent,
+        OfferComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),

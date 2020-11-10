@@ -1,0 +1,8 @@
+<div class="container">
+    <p class="row">
+        Offers
+    </p>
+    <div *ngFor="let section of sections">
+        <app-offer [offers]="section.offers"></app-offer>
+    </div>
+</div>
