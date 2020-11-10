@@ -9,7 +9,8 @@ export class OfferSectionComponent {
     sections = [
         {
             name: 'Apartamente noi',
-            image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=121%3A3713',
+            image: 'assets/icons/new-apartments.png',
+            color: '#FFC87E',
             offers: [
                 {
                     title: 'Spatiu comercial Gyros',
@@ -17,7 +18,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -25,7 +26,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -33,7 +34,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -41,13 +42,14 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
             ]
         },
         {
             name: 'Case noi',
-            image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=135%3A5622',
+            image: 'assets/icons/new-homes.png',
+            color: '#FFADAD',
             offers: [
                 {
                     title: 'Spatiu comercial Gyros',
@@ -55,7 +57,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -63,7 +65,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -71,7 +73,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -79,13 +81,14 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
             ]
         },
         {
             name: 'Top terenuri',
-            image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=123%3A3343',
+            image: 'assets/icons/new-terrains.png',
+            color: '#A0B5FF',
             offers: [
                 {
                     title: 'Spatiu comercial Gyros',
@@ -93,7 +96,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -101,7 +104,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -109,7 +112,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -117,13 +120,14 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
             ]
         },
         {
             name: 'Top spaţii comerciale',
-            image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=121%3A3641',
+            image: 'assets/icons/new-spaces.png',
+            color: '#83BDA5',
             offers: [
                 {
                     title: 'Spatiu comercial Gyros',
@@ -131,7 +135,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -139,7 +143,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -147,7 +151,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
                 {
                     title: 'Spatiu comercial Gyros',
@@ -155,7 +159,7 @@ export class OfferSectionComponent {
                     rooms: 2,
                     toilets: 2,
                     area: '160m',
-                    image: 'https://www.figma.com/file/7gGV6eF9y2p3VerOhQpJtW/Untitled?node-id=2%3A9'
+                    image: 'assets/images/real-estate.png'
                 },
             ]
         }

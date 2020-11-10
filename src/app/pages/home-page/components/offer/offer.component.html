@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row">
-        <div class="col-3" *ngFor="let offer of offers">
+    <div id="offers-parent" class="row">
+        <div class="col-md-3 offers flex-column" *ngFor="let offer of offers">
             <img src="{{offer.image}}" alt="{{offer.title}}">
             <p>{{offer.title}}</p>
             <p>{{offer.price}}</p>

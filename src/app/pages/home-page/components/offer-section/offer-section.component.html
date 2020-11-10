@@ -1,8 +1,17 @@
 <div class="container">
-    <p class="row">
-        Offers
-    </p>
-    <div *ngFor="let section of sections">
-        <app-offer [offers]="section.offers"></app-offer>
+    <div class="row" *ngFor="let section of sections">
+        <div class="pole col-1 hide-on-mobile" [ngStyle]="{'background-color': section.color}"></div>
+        <div class="pole-horizontal hide-on-desktop col-12" [ngStyle]="{'background-color': section.color}"></div>
+        <div class="col-12 col-md-1">
+            <div class="pt-2 pl-1">
+                <img src="{{section.image}}" alt="{{section.name}}">
+                <p>
+                    {{section.name}}
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-10">
+            <app-offer [offers]="section.offers"></app-offer>
+        </div>
     </div>
 </div>

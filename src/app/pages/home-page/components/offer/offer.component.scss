@@ -1,0 +1,19 @@
+img {
+    border-radius: 16px;
+    width: 240px;
+    height: 205px;
+    padding: 0;
+}
+
+#offers-parent {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+
+    @media screen and (min-width: 767px) {
+        overflow: hidden;
+    }
+}
+
+.offers {
+    display: flex;
+}
