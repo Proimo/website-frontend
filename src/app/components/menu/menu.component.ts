@@ -57,11 +57,18 @@ export class MenuComponent implements AfterViewInit {
 
     @HostListener('window:scroll', ['$event'])
     onWindowScroll() {
-        const element = document.querySelector('.fixed-top');
+        let element = document.querySelector('.fixed-top');
         if (window.pageYOffset > element.clientHeight) {
             element.classList.add('navbar-inverse');
         } else {
             element.classList.remove('navbar-inverse');
+        }
+
+        element = document.getElementById('hamburger');
+        if (window.pageYOffset > element.clientHeight) {
+            element.classList.add('hamburger-black');
+        } else {
+            element.classList.remove('hamburger-black');
         }
     }
 }

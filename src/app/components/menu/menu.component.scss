@@ -19,6 +19,10 @@ img {
     }
 }
 
+.hamburger-black {
+    background-image: url("/assets/icons/hamburger-black.svg") !important;
+}
+
 .background-transition {
     transition: background-color .5s ease-in-out;
 }
