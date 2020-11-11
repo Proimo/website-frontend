@@ -1,6 +1,9 @@
 <div class="container">
-    <div id="offers-parent" class="row">
-        <div class="col-md-3 offers flex-column" *ngFor="let offer of offers">
+    <div id="offers-parent" class="row justify-content-between">
+        <div
+            class="col-md-3 offers flex-column"
+            *ngFor="let offer of offers"
+        >
             <img src="{{offer.image}}" alt="{{offer.title}}">
             <p>{{offer.title}}</p>
             <p>{{offer.price}}</p>

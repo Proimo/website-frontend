@@ -5,14 +5,26 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-.hide-on-mobile {
+.hide-on-mobile-md {
     @media screen and (max-width: 767px) {
         display: none !important;
     }
 }
 
-.hide-on-desktop {
+.hide-on-desktop-md {
     @media screen and (min-width: 767px) {
+        display: none !important;
+    }
+}
+
+.hide-on-mobile-lg {
+    @media screen and (max-width: 992px) {
+        display: none !important;
+    }
+}
+
+.hide-on-desktop-lg {
+    @media screen and (min-width: 992px) {
         display: none !important;
     }
 }
