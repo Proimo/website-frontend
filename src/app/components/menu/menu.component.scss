@@ -11,6 +11,18 @@ img {
     border: none;
 }
 
+.navbar-inverse {
+    background-color: white;
+
+    a {
+        color: black !important;
+    }
+}
+
+.background-transition {
+    transition: background-color .5s ease-in-out;
+}
+
 .mobile-font-size {
     @media screen and (max-width: 767px) {
         font-size: 14px;

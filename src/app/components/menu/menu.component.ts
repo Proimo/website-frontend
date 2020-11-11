@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { MenuItem, MenuItemTypes } from '../../shared/models/menu-item';
 
 @Component({
@@ -53,5 +53,15 @@ export class MenuComponent implements AfterViewInit {
         menuItems.addEventListener('hidden.bs.collapse', () => {
             this.isExpanded = !this.isExpanded;
         });
+    }
+
+    @HostListener('window:scroll', ['$event'])
+    onWindowScroll() {
+        const element = document.querySelector('.fixed-top');
+        if (window.pageYOffset > element.clientHeight) {
+            element.classList.add('navbar-inverse');
+        } else {
+            element.classList.remove('navbar-inverse');
+        }
     }
 }
