@@ -1,6 +1,6 @@
 img {
-    width: 240px;
-    height: 205px;
+    width: auto;
+    height: 15px;
     padding: 0;
     border-radius: 16px;
 }
@@ -16,4 +16,31 @@ img {
 .offers {
     display: flex;
     width: auto;
+}
+
+#image {
+    width: 240px;
+    height: 205px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.feature {
+    font-size: 10px;
+    width: 100px;
+    height: 27px;
+    border-radius: 7px !important;
+    background: #A81722;
+}
+
+p {
+    line-height: 20px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#info {
+    color: #979797;
 }

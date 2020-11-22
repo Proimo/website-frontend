@@ -1,12 +1,43 @@
 <div class="container">
-    <div id="offers-parent" class="row justify-content-between">
+    <div id="offers-parent" class="d-flex justify-content-between">
         <div
-            class="col-md-3 offers flex-column"
+            class="offers flex-column"
             *ngFor="let offer of offers"
         >
-            <img src="{{offer.image}}" alt="{{offer.title}}">
-            <p>{{offer.title}}</p>
-            <p>{{offer.price}}</p>
+            <div id="image" class="" [ngStyle]="{'background-image': 'url(' + offer.image + ')'}">
+                <div class="row flex-column text-white pt-3 pl-4">
+                    <p class="feature px-0 pt-1 text-center mb-2">Commission: 70%</p>
+                    <p class="feature px-0 pt-1 text-center">Exclusivitate</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="fw-bold pt-3 pb-1 mb-1">{{offer.title}}</p>
+                <p class="proimo-blue fw-bolder fs-5 pt-0 pb-1 my-0 mb-1">{{offer.price}}</p>
+                <div id="info" class="row">
+                    <div class="col-3">
+                        <p>Rooms</p>
+                        <div class="d-flex flex-row">
+                            <img src="assets/icons/rooms.png" alt="{{offer.rooms}} rooms">
+                            <p class="pl-2">{{offer.rooms}}</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Toilets</p>
+                        <div class="d-flex flex-row">
+                            <img src="assets/icons/toilet.png" alt="{{offer.toilets}} rooms">
+                            <p class="pl-2">{{offer.toilets}}</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Area</p>
+                        <div class="d-flex flex-row">
+                            <img src="assets/icons/area.png" alt="{{offer.area}} rooms">
+                            <p class="pl-2">{{offer.area}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
