@@ -1,11 +1,11 @@
 .pole {
-    height: 350px;
     width: 6px;
+    height: 350px;
     padding: 0;
 }
 
 .pole-horizontal {
-    height: 6px;
-    left: 0;
     position: absolute;
+    left: 0;
+    height: 6px;
 }
