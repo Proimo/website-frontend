@@ -11,6 +11,7 @@ import { SearchBarComponent } from './pages/home-page/components/search-bar/sear
 import { FormsModule } from '@angular/forms';
 import { OfferSectionComponent } from './pages/home-page/components/offer-section/offer-section.component';
 import { OfferComponent } from './pages/home-page/components/offer/offer.component';
+import { CarouselComponent } from './pages/home-page/components/carousel/carousel.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { OfferComponent } from './pages/home-page/components/offer/offer.compone
         BannerComponent,
         SearchBarComponent,
         OfferSectionComponent,
-        OfferComponent
+        OfferComponent,
+        CarouselComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
