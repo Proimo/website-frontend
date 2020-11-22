@@ -21,7 +21,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfigs/tsconfig.app.json",
+            "tsConfig": "./tsconfig.app.json",
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -87,7 +87,7 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfigs/tsconfig.spec.json",
+            "tsConfig": "./tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
@@ -104,8 +104,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfigs/tsconfig.app.json",
-              "tsconfigs/tsconfig.spec.json",
+              "./tsconfig.app.json",
+              "./tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
             "exclude": [
@@ -130,7 +130,7 @@
           "options": {
             "outputPath": "dist/server",
             "main": "server.ts",
-            "tsConfig": "tsconfigs/tsconfig.server.json"
+            "tsConfig": "./tsconfig.server.json"
           },
           "configurations": {
             "production": {
