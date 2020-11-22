@@ -4,12 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
     declarations: [
         FooterComponent,
-        MenuComponent
+        MenuComponent,
+        ButtonComponent
     ],
     imports: [
         CommonModule,
@@ -21,6 +23,7 @@ import { RouterModule } from '@angular/router';
         BrowserAnimationsModule,
         FooterComponent,
         MenuComponent,
+        ButtonComponent,
     ]
 })
 export class SharedModule {

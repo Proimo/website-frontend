@@ -51,9 +51,18 @@ html, body {
     height: 42px;
     outline: none;
 
+.btn-blue {
     @media screen and (max-width: 767px) {
-        height: 35px;
+        height: 45px;
     }
+    width: auto;
+    height: 55px;
+    border-radius: 15px;
+    background: #0C9EFF;
+}
+
+.btn-blue:hover {
+    background-color: #639EFF;
 }
 
 .btn:hover {
