@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem, MenuItemTypes } from '../../shared/models/menu-item';
+import { MenuItem, MenuItemTypes } from '../../models/menu-item';
 
 @Component({
     selector: 'app-footer',
