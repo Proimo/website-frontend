@@ -1,5 +1,30 @@
-img {
-    width: auto;
-    height: 205px;
-    border-radius: 15px;
+.carousel-control-next-icon {
+    background-image: url('/assets/icons/arrow-right.png');
+    filter: invert(0);
+}
+
+.carousel-control-prev-icon {
+    background-image: url('/assets/icons/arrow-left.png');
+    filter: invert(0);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-size: auto;
+}
+
+.carousel-indicators li {
+    background-color: #0C9EFF;
+}
+
+.carousel-control-prev {
+    @media screen and (min-width: 766px) and (max-width: 992px) {
+        justify-content: flex-start;
+    }
+}
+
+.carousel-control-next {
+    @media screen and (min-width: 766px) and (max-width: 992px) {
+        justify-content: flex-end;
+    }
 }

@@ -95,3 +95,11 @@ html, body {
         font-size: 12px !important;
     }
 }
+
+.mobile-scroll {
+    @media screen and (min-width: 767px) {
+        overflow: hidden;
+    }
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}

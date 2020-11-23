@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { OfferSectionComponent } from './pages/home-page/components/offer-section/offer-section.component';
 import { OfferComponent } from './pages/home-page/components/offer/offer.component';
 import { CarouselComponent } from './pages/home-page/components/carousel/carousel.component';
+import { TeamMembersComponent } from './pages/home-page/components/team-member/team-members.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { CarouselComponent } from './pages/home-page/components/carousel/carouse
         SearchBarComponent,
         OfferSectionComponent,
         OfferComponent,
-        CarouselComponent
+        CarouselComponent,
+        TeamMembersComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),

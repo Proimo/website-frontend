@@ -1,0 +1,15 @@
+img {
+    @media screen and (min-width: 766px) and (max-width: 992px) {
+        width: 175px;
+        height: 175px;
+    }
+    width: auto;
+    height: 205px;
+    border-radius: 15px;
+}
+
+p, h5 {
+    @media screen and (min-width: 766px) and (max-width: 992px) {
+        font-size: 15px;
+    }
+}

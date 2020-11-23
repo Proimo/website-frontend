@@ -1,4 +1,4 @@
-<div id="carouselExampleDark" class="pt-5 carousel carousel-dark slide" data-ride="carousel">
+<div id="carouselExampleDark" class="pt-5 carousel carousel-dark slide hide-on-mobile-md" data-ride="carousel">
     <ol class="carousel-indicators pt-5">
         <li data-target="#carouselExampleDark" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleDark" data-slide-to="1"></li>
@@ -6,43 +6,13 @@
     </ol>
     <div class="carousel-inner pb-5">
         <div class="carousel-item active" data-interval="10000">
-            <div class="px-5 mx-5 d-flex flex-row justify-content-around">
-                <div *ngFor="let person of team.slice(0, 3)" class="d-flex flex-column">
-                    <img src="{{person.image}}" class="d-block" alt="...">
-                    <div class="">
-                        <p class="pb-0 mb-0">{{person.email}}</p>
-                        <p class="pt-0 mt-0">{{person.phone_number}}</p>
-                        <h5 class="proimo-blue pb-0 mb-0">{{person.name}}</h5>
-                        <p class="fs-6 pt-0 mt-0">{{person.post}}</p>
-                    </div>
-                </div>
-            </div>
+            <app-team-member [people]="team.slice(0, 3)"></app-team-member>
         </div>
         <div class="carousel-item" data-interval="2000">
-            <div class="px-5 mx-5 d-flex flex-row justify-content-around">
-                <div *ngFor="let person of team.slice(3, 6)" class="d-flex flex-column">
-                    <img src="{{person.image}}" class="d-block" alt="...">
-                    <div class="d-none d-md-block">
-                        <p>{{person.email}}</p>
-                        <p>{{person.phone_number}}</p>
-                        <h5 class="proimo-blue">{{person.name}}</h5>
-                        <p>{{person.post}}</p>
-                    </div>
-                </div>
-            </div>
+            <app-team-member [people]="team.slice(3, 6)"></app-team-member>
         </div>
         <div class="carousel-item">
-            <div class="px-5 mx-5 d-flex flex-row justify-content-around">
-                <div *ngFor="let person of team.slice(6, 9)" class="d-flex flex-column">
-                    <img src="{{person.image}}" class="d-block" alt="...">
-                    <div class="d-none d-md-block">
-                        <p>{{person.email}}</p>
-                        <p>{{person.phone_number}}</p>
-                        <h5 class="proimo-blue">{{person.name}}</h5>
-                        <p>{{person.post}}</p>
-                    </div>
-                </div>
-            </div>
+            <app-team-member [people]="team.slice(6, 9)"></app-team-member>
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-slide="prev">
@@ -53,4 +23,13 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </a>
+</div>
+
+<div id="mobile-scroll" class="d-flex hide-on-desktop-md mobile-scroll">
+    <div
+        class="offers flex-column"
+        *ngFor="let person of team"
+    >
+        <app-team-member [people]="[person]"></app-team-member>
+    </div>
 </div>

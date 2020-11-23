@@ -1,0 +1,11 @@
+<div class="px-2 px-md-5 px-lg-5 mx-lg-5 d-flex flex-row justify-content-around">
+    <div *ngFor="let person of people" class="d-flex flex-column">
+        <img src="{{person.image}}" class="d-block" alt="...">
+        <div class="mb-5">
+            <p class="pb-0 mb-0">{{person.email}}</p>
+            <p class="pt-0 mt-0">{{person.phone_number}}</p>
+            <h5 class="proimo-blue pb-0 mb-0">{{person.name}}</h5>
+            <p class="fs-6 pt-0 mt-0">{{person.post}}</p>
+        </div>
+    </div>
+</div>
