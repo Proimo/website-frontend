@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-offer-section',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./offer-section.component.scss']
 })
 export class OfferSectionComponent {
+    length = 10;
     sections = [
         {
             name: 'Apartamente noi',
@@ -164,4 +165,22 @@ export class OfferSectionComponent {
             ]
         }
     ];
+
+    constructor() {
+        if (window.innerWidth > 766 && window.innerWidth < 1200) {
+            this.length = 3;
+        } else {
+            this.length = 10;
+        }
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+        if (event.target.innerWidth > 766 && event.target.innerWidth < 1200) {
+            console.log(event.target.innerWidth);
+            this.length = 3;
+        } else {
+            this.length = 10;
+        }
+    }
 }

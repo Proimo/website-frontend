@@ -1,7 +1,7 @@
 <div class="container">
-    <div id="offers-parent" class="d-flex justify-content-between">
+    <div id="" class="d-flex justify-content-between mobile-scroll">
         <div
-            class="offers flex-column"
+            class="offers d-flex flex-column align-items-center"
             *ngFor="let offer of offers"
         >
             <div id="image" class="" [ngStyle]="{'background-image': 'url(' + offer.image + ')'}">
@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="d-flex flex-column">
                 <p class="fw-bold pt-3 pb-1 mb-1">{{offer.title}}</p>
                 <p class="proimo-blue fw-bolder fs-5 pt-0 pb-1 my-0 mb-1">{{offer.price}}</p>
                 <div id="info" class="row">

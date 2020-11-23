@@ -5,20 +5,16 @@ img {
     border-radius: 16px;
 }
 
-#offers-parent {
-    @media screen and (min-width: 767px) {
-        overflow: hidden;
-    }
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-}
-
 .offers {
     display: flex;
     width: auto;
 }
 
 #image {
+    @media screen and (min-width: 766px) and (max-width: 992px) {
+        width: 217px;
+        height: 185px;
+    }
     width: 240px;
     height: 205px;
     border-radius: 10px;
