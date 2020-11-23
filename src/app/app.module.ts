@@ -3,33 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '@shared/shared.module';
-import { BannerComponent } from './pages/home-page/components/banner/banner.component';
-import { SearchBarComponent } from './pages/home-page/components/search-bar/search-bar.component';
-import { FormsModule } from '@angular/forms';
-import { OfferSectionComponent } from './pages/home-page/components/offer-section/offer-section.component';
-import { OfferComponent } from './pages/home-page/components/offer/offer.component';
-import { CarouselComponent } from './pages/home-page/components/carousel/carousel.component';
-import { TeamMembersComponent } from './pages/home-page/components/team-member/team-members.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomePageComponent,
-        BannerComponent,
-        SearchBarComponent,
-        OfferSectionComponent,
-        OfferComponent,
-        CarouselComponent,
-        TeamMembersComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
+        BrowserAnimationsModule,
         HttpClientModule,
         SharedModule,
-        FormsModule,
         AppRoutingModule,
     ],
     providers: [],
