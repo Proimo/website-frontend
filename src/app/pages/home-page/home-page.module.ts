@@ -21,7 +21,7 @@ import { HomePageRoutingModule } from './home-page-routing.module';
         OfferComponent,
         CarouselComponent,
         TeamMembersComponent,
-        BecomeAgentComponent
+        BecomeAgentComponent,
     ],
     imports: [
         SharedModule,
