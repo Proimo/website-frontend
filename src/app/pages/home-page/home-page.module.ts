@@ -10,6 +10,7 @@ import { BecomeAgentComponent } from './components/become-agent/become-agent.com
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { HomePageRoutingModule } from './home-page-routing.module';
+import { ResidentialsComponent } from './components/residentials/residentials.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HomePageRoutingModule } from './home-page-routing.module';
         CarouselComponent,
         TeamMembersComponent,
         BecomeAgentComponent,
+        ResidentialsComponent
     ],
     imports: [
         SharedModule,
